@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Search Clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-zinc-950 text-zinc-100 font-sans h-screen overflow-hidden">
+
+    <div class="flex h-full max-w-md mx-auto bg-zinc-900 shadow-2xl border-x border-zinc-800">
+        <!-- Header & Search Section -->
+        <header class="p-4 space-y-4 bg-zinc-900 border-b border-zinc-800">
+            <div class="flex justify-between items-center">
+                <h1 class="text-2xl font-bold text-emerald-500">WhatsApp</h1>
+                <div class="flex gap-3 text-zinc-400">
+                    <i data-lucide="message-square" class="size-5 cursor-pointer hover:text-emerald-400 transition-colors"></i>
+                    <i data-lucide="more-vertical" class="size-5 cursor-pointer hover:text-emerald-400 transition-colors"></i>
+                </div>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="relative group">
+                <i data-lucide="search" class="absolute left-3 top-1/2 -translate-y-1/2 size-4 text-zinc-500 group-focus-within:text-emerald-500 transition-colors"></i>
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Buscar nombre o número..."
+                    class="w-full bg-zinc-800 border border-zinc-700 text-zinc-200 pl-10 pr-4 py-2 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-500 transition-all"
+                >
+            </div>
+        </header>
+
+        <!-- Contacts List -->
+        <main class="flex-1 overflow-y-auto custom-scrollbar" id="contactsList">
+            <!-- Contacts are injected here by script.js -->
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
